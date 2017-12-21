@@ -1,9 +1,11 @@
 <template>
   <div>
-    <Timer v-bind="timer()"></Timer>
-    <ChestList v-bind="chests()"></ChestList>
-    <AnswerForm v-if="isAnswered()"></AnswerForm>
-    <AnswerValue v-else v-bind="answer()"></AnswerValue>
+    <Timer></Timer>
+    <div class="description">Имперский галеон везет 6 сундуков с пиастрами для выплаты жалованья гарнизонам,<br>расположенным на островах Анкорского моря. В сундуках находится разное количество пиастров:</div>
+    <ChestList></ChestList>
+    <div class="conditions">В первый гарнизон на оплату жалованья солдатам передали ровно два полных сундука, а во второй —три. В обоих случаях денег как раз хватило, так что на других сундуках замки открывать не пришлось. Причем в первом гарнизоне сумма жалованья была в два раза меньше, чем во втором. Затем имперский галеон отправился к следующему гарнизону. Из шести сундуков на нем остался только один. Сколько в нем было пиастров?</div>
+    <AnswerValue v-if="isAnswered"></AnswerValue>
+    <AnswerForm v-else></AnswerForm>
   </div>
 </template>
 
@@ -19,15 +21,6 @@
       Timer, ChestList, AnswerForm, AnswerValue
     },
     computed: {
-      timer () {
-        return this.$store.state.timer
-      },
-      chests () {
-        return this.$store.state.chests
-      },
-      answer () {
-        return this.$store.state.answer
-      },
       isAnswered () {
         return this.$store.state.isAnswered
       }

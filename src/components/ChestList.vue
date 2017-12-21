@@ -1,7 +1,7 @@
 <template>
     <div class="chests">
-        <ul id="task-chests">
-            <li v-for="chest in chests"><img src="../assets/chest.png"><span>{{ chest }}</span> пиастров</li>
+        <ul>
+            <li v-for="chest in chests"><img src="static/img/chest.png"><span>{{ chest }}</span> пиастров</li>
         </ul>
     </div>
 </template>
@@ -9,7 +9,7 @@
 <script>
 const ChestList = {
   computed: {
-    chest () {
+    chests () {
       return this.$store.state.chests
     }
   }

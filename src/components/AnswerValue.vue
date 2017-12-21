@@ -1,5 +1,5 @@
 <template>
-    <div>{{answer}}</div>
+    <div class="answer">Ваш ответ: {{answer}}</div>
 </template>
 
 <script>

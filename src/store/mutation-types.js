@@ -1,3 +1,8 @@
 export const IMPORT_CHESTS = 'IMPORT_CHESTS'
 export const SET_STATUS = 'SET_STATUS'
 export const SET_TIMER = 'SET_TIMER'
+export const SET_START_TIME = 'SET_START_TIME'
+export const SET_DURATION = 'SET_DURATION'
+export const SET_ANSWER = 'SET_ANSWER'
+export const UPDATE_ANSWER = 'UPDATE_ANSWER'
+export const SET_ERROR = 'SET_ERROR'
