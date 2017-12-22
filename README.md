@@ -1,6 +1,6 @@
 # navi-task-game
 
-> Single player game Navigational Task
+> Single player game Navigational Task (Vue+Vuex)
 
 ## Build Setup
 
