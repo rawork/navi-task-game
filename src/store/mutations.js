@@ -1,4 +1,4 @@
-import { IMPORT_CHESTS, SET_STATUS, SET_TIMER, SET_START_TIME, SET_DURATION, SET_ANSWER, UPDATE_ANSWER, SET_ERROR } from './mutation-types'
+import { IMPORT_CHESTS, SET_STATUS, SET_TIMER, SET_START_TIME, SET_DURATION, SET_ANSWER, UPDATE_ANSWER, SET_ERROR, CHOOSE_CHEST } from './mutation-types'
 
 export const mutations = {
   [IMPORT_CHESTS] (state, chests) {
@@ -25,5 +25,12 @@ export const mutations = {
   [SET_ERROR] (state, error) {
     state.error = error
     state.status = 'error'
+  },
+  [CHOOSE_CHEST] (state, chest) {
+    state.chests = state.chests.map(function (item, index) {
+      item.checked = item.value === chest.value
+      return item
+    })
+    state.answer = chest.value
   }
 }

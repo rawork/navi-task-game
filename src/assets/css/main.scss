@@ -89,16 +89,32 @@ body {
 
       & li {
         display: inline-block;
+        position: relative;
         width: 16.0%;
         font-family: 'Beryozki', Arial, Helvetica Neue, Helvetica, sans-serif;
         font-size: 30px;
         font-style: normal;
         font-weight: normal;
+        cursor: pointer;
 
         & img {
           width: 100px;
           height: auto;
           display: inline-block;
+        }
+
+        & .checkbox {
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          height: auto;
+          background-image: url('/static/img/check-mark.svg');
+          background-position: 74% center;
+          background-repeat: no-repeat;
+          background-size: 16px;
+          z-index: 10;
         }
 
         & span {

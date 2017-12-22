@@ -1,5 +1,14 @@
 {
-  "chests": [1000, 1550, 750, 950, 800, 900],
+  "chests": [
+    {"value": 1000, "checked": false},
+    {"value": 1550, "checked": false},
+    {"value": 750, "checked": false},
+    {"value": 950, "checked": false},
+    {"value": 800, "checked": false},
+    {"value": 900, "checked": false}
+  ],
   "duration": 25,
-  "startTime": 1513849365
+  "startTime": 1513849365,
+  "answer": null,
+  "isAnswered": false
 }

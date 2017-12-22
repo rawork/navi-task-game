@@ -31,11 +31,11 @@ const store = new Vuex.Store({
           commit(SET_START_TIME, new Date().getTime() / 1000) // response.data.startTime
           commit(IMPORT_CHESTS, response.data.chests)
           commit(SET_DURATION, response.data.duration)
+          commit(SET_ANSWER, response.data.answer)
 
           timerInterval = setInterval(function () {
             const startTime = state.startTime
             const stopTime = state.startTime + (state.duration * 60)
-
             const currentTime = Math.ceil(new Date().getTime() / 1000)
 
             if (currentTime >= stopTime) {
@@ -61,6 +61,10 @@ const store = new Vuex.Store({
       )
     },
     saveAnswer ({commit, state}) {
+      if (state.answer === null) {
+        alert('Выберите вариант ответа')
+        return
+      }
       task.setData(
         state.answer,
         response => {

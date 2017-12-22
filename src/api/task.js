@@ -1,6 +1,7 @@
 import axios from 'axios'
 
 const apiUrl = '/static/test.json'
+// const apiUrl = 'http://korsar2/ajax/sandbox/task/data';
 
 const task = {
   getData: function (successHandler, failureHandler) {
